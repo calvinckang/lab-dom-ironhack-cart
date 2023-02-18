@@ -30,7 +30,7 @@ function calculateAll() {
   //... your code goes here
   const total = document.querySelector('#total-value span');
   let totalValue = 0;
-  document.querySelectorAll('.subtotal span').forEach(el=>totalValue+=+el.innerHTML);
+  document.querySelectorAll('.subtotal span').forEach(el => totalValue+=+el.innerHTML);
   total.innerHTML = totalValue;
 }
 
@@ -40,8 +40,7 @@ function removeProduct(event) {
   const target = event.currentTarget;
   console.log('The target in remove is:', target);
   //... your code goes here
-  // const targetParent = target.parentNode;
-  // targetParent.removeChild(target);
+  target.parentNode.parentNode.remove();
 }
 
 // ITERATION 5
